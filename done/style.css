@@ -1,0 +1,62 @@
+:root {
+	--fontFamily: 'Open Sans', sans-serif;
+}
+
+* {
+	font-family: var(--fontFamily);
+	list-style-type: none;
+	text-orientation: none;
+}
+
+.wrapper {
+	min-height: 100vh;
+	background-image: url('./bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#menu {
+	display: none;
+}
+
+.content {
+	min-height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	z-index: 100;
+	transform: scale(0);
+	transition: .5s;
+}
+
+.nav-wrapper {
+	height: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-wrapper ul li {
+	display: inline-block;
+	margin: 0 1.2rem;
+}
+
+.nav-wrapper ul li a {
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+#menu:checked + .nav-fixed {
+	transform: scale(1);
+	border-radius: 0;
+}
